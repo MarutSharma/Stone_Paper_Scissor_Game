@@ -1,40 +1,77 @@
-# ✂️ Stone Paper Scissors Game
+# ✂️ Stone Paper Scissors — Play vs Computer
 
-A classic **Stone Paper Scissors** game built with vanilla HTML, CSS, and JavaScript — play against the computer and track your score in real time!
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Status](https://img.shields.io/badge/Status-Live-brightgreen?style=for-the-badge)
+![No Dependencies](https://img.shields.io/badge/Dependencies-None-blue?style=for-the-badge)
+
+A fast, responsive **Stone Paper Scissors** game where you compete against a computer opponent — built entirely with vanilla HTML, CSS, and JavaScript. No frameworks, no installs, just click and play.
 
 ---
 
-## 🎮 Demo
+## 🌐 Live Demo
 
-> Clone the repo and open `index.html` in your browser to start playing instantly. No installation required.
+🔗 **[Play Now → marutsharma.github.io/Stone_Paper_Scissor_Game](https://marutsharma.github.io/Stone_Paper_Scissor_Game/)**
+*(Activate via GitHub Pages in your repo Settings → Pages)*
 
 ---
 
-## 📸 Preview
+## 🎮 About The Game
 
-| Player Choices | Scoreboard |
+You pick **Stone**, **Paper**, or **Scissors** by clicking the image. The computer instantly makes a random choice. The result is displayed immediately and the scoreboard updates — first to rack up the most wins takes the crown. Built as a front-end fundamentals project to demonstrate JavaScript logic, randomness, real-time DOM updates, and responsive UI design.
+
+---
+
+## 🖥️ Preview
+
+```
+┌─────────────────────────────────┐
+│       Stone  Paper  Scissors    │
+│        🪨      📄      ✂️        │
+│                                 │
+│    You 👤   5  —  3   💻 Computer│
+│                                 │
+│      🎉 You Win This Round!     │
+└─────────────────────────────────┘
+```
+
+---
+
+## ✨ Features
+
+| Feature | Description |
 |---|---|
-| Rock 🪨 · Paper 📄 · Scissors ✂️ | You 👤 vs Computer 💻 |
+| 🖱️ One-Click Gameplay | Click an image to instantly make your move |
+| 🤖 Computer Opponent | Computer picks randomly using `Math.random()` |
+| 📊 Live Scoreboard | Tracks Player vs Computer score in real time |
+| 📢 Round Result Message | Instantly shows Win / Lose / Draw after each move |
+| 🖼️ Image-Based UI | Visual choice buttons using custom images |
+| 📱 Responsive Design | Playable on both desktop and mobile browsers |
 
 ---
 
-## 🚀 Features
+## 🛠️ Built With
 
-- **One-click gameplay** — click on Rock, Paper, or Scissors to make your move
-- **Computer AI** — the computer picks a random move each round
-- **Live scoreboard** — tracks wins for both the player and the computer
-- **Round result message** — instantly displays whether you won, lost, or drew
-- **Clean UI** — image-based choice buttons with a minimal, responsive layout
+- **HTML5** — Semantic layout, image-based choice buttons, scoreboard structure
+- **CSS3** — Flexbox layout, card styling, responsive design
+- **JavaScript (ES6)** — Random computer logic, result evaluation, live DOM updates
+
+No libraries. No build tools. No package manager.
 
 ---
 
-## 🛠️ Tech Stack
+## 💡 Key Concepts Demonstrated
 
-| Technology | Purpose |
-|---|---|
-| HTML5 | Page structure & layout |
-| CSS3 | Styling & visual design |
-| JavaScript (ES6) | Game logic & DOM manipulation |
+> What this project shows a recruiter or interviewer:
+
+- **DOM Manipulation** — Dynamically updating score counters and result messages on every move
+- **Randomness & Logic** — Using `Math.random()` and `Math.floor()` to simulate a computer decision
+- **Conditional Logic** — Evaluating all 9 possible move combinations (3 choices × 3 choices) to determine win/draw/loss
+- **Event Handling** — Attaching click listeners to image elements and routing game logic through them
+- **Separation of Concerns** — HTML handles structure, CSS handles presentation, JS handles all game logic
+- **Score State Management** — Maintaining and incrementing player/computer score variables across rounds
+- **UX Design** — Immediate visual feedback on every interaction without any page reload
 
 ---
 
@@ -42,68 +79,82 @@ A classic **Stone Paper Scissors** game built with vanilla HTML, CSS, and JavaSc
 
 ```
 Stone_Paper_Scissor_Game/
-├── index.html       # Main HTML file
-├── style.css        # Styles and layout
-├── app.js           # Game logic
+│
+├── index.html        ← Game layout: choice buttons, scoreboard, result message
+├── style.css         ← Styling: flex layout, card design, score board, responsiveness
+├── app.js            ← Logic: computer random pick, result check, score update, DOM render
 └── image/
-    ├── rock.png     # Rock choice image
-    ├── paper.png    # Paper choice image
-    └── scissors.png # Scissors choice image
+    ├── rock.png      ← Rock choice image
+    ├── paper.png     ← Paper choice image
+    └── scissors.png  ← Scissors choice image
 ```
 
 ---
 
-## ⚙️ How to Run
+## 🚀 Getting Started
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/MarutSharma/Stone_Paper_Scissor_Game.git
-   ```
+### Option 1 — Open directly in browser
 
-2. **Navigate into the project folder**
-   ```bash
-   cd Stone_Paper_Scissor_Game
-   ```
+```bash
+git clone https://github.com/MarutSharma/Stone_Paper_Scissor_Game.git
+cd Stone_Paper_Scissor_Game
+# Double-click index.html or run:
+open index.html
+```
 
-3. **Open the game in your browser**
-   ```bash
-   open index.html
-   ```
-   Or simply double-click `index.html` in your file explorer.
+### Option 2 — Use Live Server (VS Code)
 
-> ✅ No frameworks, no dependencies, no build step — it just works!
+1. Install the **Live Server** extension in VS Code
+2. Right-click `index.html` → **Open with Live Server**
+3. Game opens at `http://127.0.0.1:5500`
 
 ---
 
-## 🎯 How to Play
+## 📖 How to Play
 
-1. You will see three choices: **Paper**, **Scissors**, and **Rock**
-2. Click on the image representing your move
-3. The computer will randomly select its move
-4. The result message will tell you if you **Won 🎉**, **Lost 😞**, or **Drew 🤝**
-5. Scores update automatically after each round
+```
+Step 1 → Look at the three choices: Rock 🪨, Paper 📄, Scissors ✂️
+Step 2 → Click on your chosen image
+Step 3 → Computer instantly picks its move at random
+Step 4 → Result is shown — Win 🎉, Lose 😞, or Draw 🤝
+Step 5 → Scores update automatically — keep playing to outscore the computer!
+```
 
 ---
 
-## 🧠 Game Rules
+## 🗺️ Game Rules
 
 | Your Move | Computer Move | Result |
-|---|---|---|
-| Rock 🪨 | Scissors ✂️ | You Win |
-| Scissors ✂️ | Paper 📄 | You Win |
-| Paper 📄 | Rock 🪨 | You Win |
-| Same | Same | Draw |
-| Any | Stronger | You Lose |
+|:---------:|:-------------:|:------:|
+| 🪨 Rock | ✂️ Scissors | ✅ You Win |
+| ✂️ Scissors | 📄 Paper | ✅ You Win |
+| 📄 Paper | 🪨 Rock | ✅ You Win |
+| ⚡ Same | ⚡ Same | 🤝 Draw |
+| Any | Stronger | ❌ You Lose |
+
+---
+
+## 🔮 Planned Improvements
+
+- [ ] 🏆 Best-of-5 / Best-of-10 tournament mode
+- [ ] 🎵 Sound effects on win, lose, and draw
+- [ ] 🎉 Confetti or animation on winning streak
+- [ ] 📈 Game history log showing past rounds
+- [ ] 🌙 Dark Mode toggle
 
 ---
 
 ## 👤 Author
 
 **Marut Sharma**
-- GitHub: [@MarutSharma](https://github.com/MarutSharma)
+GitHub → [@MarutSharma](https://github.com/MarutSharma)
 
 ---
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source under the [MIT License](LICENSE).
+
+---
+
+<p align="center">Made with ❤️ using vanilla HTML, CSS & JavaScript</p>
